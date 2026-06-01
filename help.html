@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help — Community Event Portal</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green:       #2d6a4f;
+      --green-light: #52b788;
+      --cream:       #f8f4ef;
+      --dark:        #1a1a2e;
+      --muted:       #555e68;
+      --border:      #ddd;
+      --gold:        #e9c46a;
+      --radius:      8px;
+      --shadow:      0 2px 12px rgba(0,0,0,.10);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    /* Navigation */
+    nav {
+      background: var(--dark);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    }
+
+    nav .brand {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 1.2rem;
+      padding: 18px 0;
+      margin-right: auto;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 18px 14px;
+      font-weight: 500;
+      font-size: .95rem;
+      transition: color .2s;
+    }
+
+    nav a:hover { color: var(--gold); }
+    nav a.active { color: var(--gold); }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 60px 40px 40px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d6a4f 100%);
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      opacity: .85;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Main content */
+    .help-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 50px 40px;
+    }
+
+    /* FAQ accordion */
+    .faq-group {
+      margin-bottom: 40px;
+    }
+
+    .faq-group h2 {
+      font-size: 1.4rem;
+      color: var(--green);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .faq-item {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 16px 20px;
+      background: none;
+      border: none;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background .2s;
+    }
+
+    .faq-question:hover { background: #f0faf5; }
+
+    .faq-question .arrow {
+      font-size: 1.1rem;
+      transition: transform .25s;
+      color: var(--green);
+    }
+
+    .faq-question.open .arrow { transform: rotate(180deg); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 16px;
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.8;
+    }
+
+    .faq-answer.open { display: block; }
+
+    /* Back link */
+    .back-link {
+      display: inline-block;
+      margin-bottom: 32px;
+      color: var(--green);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .95rem;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #aaa;
+      text-align: center;
+      padding: 28px 40px;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <span class="brand">CityConnect</span>
+    <a href="index.html">Home</a>
+    <a href="index.html#events">Events</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="help.html" class="active">Help</a>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Help & Support</h1>
+    <p>Find answers to common questions about using the Community Event Portal.</p>
+  </div>
+
+  <!-- Help Content -->
+  <div class="help-wrapper">
+
+    <a href="index.html" class="back-link">← Back to Portal</a>
+
+    <!-- Registration -->
+    <div class="faq-group">
+      <h2>Event Registration</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How do I register for an event?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Go to the <strong>Event Registration</strong> section on the home page. Fill in your name, email, preferred date, and select an event type, then click <em>Register Now</em>. You will see a confirmation message on screen.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Can I register for multiple events?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Yes. Simply fill in the registration form again for each event you wish to attend. Each submission is treated separately.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          What should I do if the form won't submit?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Make sure all required fields (marked with an asterisk) are filled in correctly. Check that your email address is in a valid format and that you have selected an event type from the dropdown.
+        </div>
+      </div>
+    </div>
+
+    <!-- Preferences -->
+    <div class="faq-group">
+      <h2>Preferences</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How does the preferred event type work?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          When you select a preferred event type in the <strong>Your Preferences</strong> section, it is saved in your browser's local storage. The next time you visit the portal, your preference will be automatically pre-selected for you.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How do I clear my saved preferences?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Click the <strong>Clear Preferences</strong> button in the Preferences section. This will remove all saved data from your browser for this portal.
+        </div>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="faq-group">
+      <h2>Finding Nearby Events</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Why is the portal asking for my location?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          The <strong>Find Nearby Events</strong> feature uses your device's GPS to show you events happening close to where you are. Your location is only used in the browser and is never stored or sent to any server.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          What if I deny location permission?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          If you deny permission, the portal will show a message letting you know. You can still browse and register for events manually without sharing your location.
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback -->
+    <div class="faq-group">
+      <h2>Feedback & Contact</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How do I submit feedback about an event?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Scroll to the <strong>Event Feedback</strong> section. Enter your phone number, select the event, write your feedback, and click <em>Submit Feedback</em>.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How do I contact the City Council directly?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Use the <strong>Contact Us</strong> section at the bottom of the home page. Fill in your name, email, subject, and message and click <em>Send Message</em>. You can also call us at <strong>+91 44 2345 6789</strong> or email <strong>events@citycouncil.gov.in</strong>.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 City Council Community Portal. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleFAQ(btn) {
+      var answer = btn.nextElementSibling;
+      var isOpen = answer.classList.contains('open');
+
+      document.querySelectorAll('.faq-answer.open').forEach(function(a) {
+        a.classList.remove('open');
+      });
+      document.querySelectorAll('.faq-question.open').forEach(function(b) {
+        b.classList.remove('open');
+      });
+
+      if (!isOpen) {
+        answer.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+  </script>
+
+</body>
+</html>
