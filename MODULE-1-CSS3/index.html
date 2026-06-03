@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<title>Local Community Event Portal</title>
+	<style>
+		body {
+			background-color: #eaf1f8;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul class="nav-menu">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#events">Events</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="help.html" target="_blank">Help Document</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<section id="home">
+			<h1 id="mainHeader">Local Community Event Portal</h1>
+			<div id="welcomeBanner">
+				Welcome to the local community event portal.
+				<span class="special-offer">Special offer: first 50 registrations get priority seating.</span>
+			</div>
+			<p class="highlight">Use this page to register for events, check fees, and quickly find venue locations.</p>
+			<h3 style="color: #b91c1c;">Community Update</h3>
+			<p>Weekend volunteer registrations are now open for the first week of June.</p>
+			<ul class="community-list">
+				<li>Morning clean-up at the riverside park</li>
+				<li>Free health check-up camp in ward office hall</li>
+				<li>Reading corner setup for local school children</li>
+			</ul>
+		</section>
+
+		<section id="events">
+			<h2>Community Event Gallery</h2>
+			<table>
+				<tr>
+					<td>
+						<figure class="eventCard">
+							<img src="images/music-festival.jpg" alt="People attending music festival" title="Music Festival" class="event-image">
+							<figcaption>Music festival evening in the park.</figcaption>
+						</figure>
+					</td>
+					<td>
+						<figure class="eventCard">
+							<img src="images/food-drive.jpg" alt="Volunteers in food drive" title="Food Drive" class="event-image">
+							<figcaption>Weekend food donation drive with volunteers.</figcaption>
+						</figure>
+					</td>
+					<td>
+						<figure class="eventCard">
+							<img src="images/book-fair.jpg" alt="Children at book fair" title="Book Fair" class="event-image">
+							<figcaption>Local children enjoying the annual book fair.</figcaption>
+						</figure>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<figure class="eventCard">
+							<img src="images/art-workshop.jpg" alt="Adults in art workshop" title="Art Workshop" class="event-image">
+							<figcaption>Creative art workshop for all age groups.</figcaption>
+						</figure>
+					</td>
+					<td>
+						<figure class="eventCard">
+							<img src="images/city-marathon.jpg" alt="People at city marathon" title="City Marathon" class="event-image">
+							<figcaption>City marathon with residents and visitors.</figcaption>
+						</figure>
+					</td>
+					<td>
+						<figure class="eventCard">
+							<img src="images/clean-up-drive-v2.jpg" alt="Community clean up drive" title="Clean Up Drive" class="event-image">
+							<figcaption>Neighborhood clean-up initiative.</figcaption>
+						</figure>
+					</td>
+				</tr>
+			</table>
+
+			<h3>Event Fee Table</h3>
+			<table class="fee-table">
+				<tr>
+					<th>Event</th>
+					<th>Location</th>
+					<th>Fee</th>
+				</tr>
+				<tr>
+					<td>Music Festival</td>
+					<td>City Open Ground</td>
+					<td>Rs. 500</td>
+				</tr>
+				<tr>
+					<td>Food Drive</td>
+					<td>Community Hall</td>
+					<td>Free</td>
+				</tr>
+				<tr>
+					<td>Art Workshop</td>
+					<td>Library Block B</td>
+					<td>Rs. 300</td>
+				</tr>
+			</table>
+		</section>
+
+		<section id="contact">
+			<h2>Event Registration</h2>
+			<form id="registrationForm">
+				<label for="name">Name</label>
+				<input id="name" name="name" type="text" placeholder="Enter your full name" required autofocus>
+
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+				<label for="eventDate">Date</label>
+				<input id="eventDate" name="eventDate" type="date" required>
+
+				<label for="eventType">Event Type</label>
+				<select id="eventType" name="eventType" required>
+					<option value="">Select an event</option>
+					<option value="Music Festival">Music Festival</option>
+					<option value="Food Drive">Food Drive</option>
+					<option value="Art Workshop">Art Workshop</option>
+				</select>
+
+				<label for="phone">Phone Number</label>
+				<input id="phone" name="phone" type="text" placeholder="10-digit phone number" required>
+
+				<label for="message">Message</label>
+				<textarea id="message" name="message" rows="4" placeholder="Write your message" required></textarea>
+
+				<button type="submit">Submit Registration</button>
+				<output id="confirmation" class="note"></output>
+			</form>
+		</section>
+
+		<section>
+			<h2>Event Promo Video</h2>
+			<video id="promoVideo" width="400" controls>
+				<source src="videos/event-promo.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+		</section>
+
+		<section>
+			<h2>Community Bulletin</h2>
+			<p class="news-article">
+				The city council has announced a month-long community participation drive. Residents are encouraged to
+				join neighborhood-level activities focused on cleanliness, public health awareness, and weekend recreation.
+				Each ward will host at least one skill-sharing session where local volunteers can teach photography,
+				basic first aid, spoken English, and arts for children. Organizers have requested residents to complete
+				event registration forms early so that seating and safety arrangements can be managed smoothly.
+			</p>
+			<p class="visibility-hidden">This line uses visibility hidden style in CSS for box model comparison.</p>
+			<p class="display-none">This line uses display none style in CSS for box model comparison.</p>
+		</section>
+	</main>
+
+	<footer>
+		<p>Local Community Event Portal</p>
+	</footer>
+</body>
+</html>
