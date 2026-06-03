@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<title>Local Community Event Portal</title>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav>
+		<ul class="nav-menu">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#events">Events</a></li>
+			<li><a href="#register">Register</a></li>
+			<li><a href="help.html" target="_blank">Help Document</a></li>
+		</ul>
+	</nav>
+
+	<!-- Main -->
+	<main>
+		<section id="home">
+			<h1 id="mainHeader">Local Community Event Portal</h1>
+			<div id="welcomeBanner">
+				Welcome to the local community event portal.
+				<span style="color: red; font-weight: bold;">Special offer: first 50 registrations get priority seating.</span>
+			</div>
+			<p class="highlight">View upcoming events, register, filter by category, and search by name.</p>
+		</section>
+
+		<section id="events">
+			<h2>Upcoming Events</h2>
+			<div id="loadingSpinner">Loading events...</div>
+			<div id="upcomingEvents"></div>
+		</section>
+
+		<section>
+			<h2>Filter by Category</h2>
+			<select id="categoryFilter">
+				<option value="all">All Events</option>
+				<option value="Music">Music</option>
+				<option value="Food">Food</option>
+				<option value="Art">Art</option>
+				<option value="Books">Books</option>
+				<option value="Sports">Sports</option>
+			</select>
+			<div id="filterResults"></div>
+		</section>
+
+		<section>
+			<h2>Quick Event Search</h2>
+			<input type="text" id="eventSearch" placeholder="Type event name and press Enter">
+			<div id="searchResults"></div>
+		</section>
+
+		<section id="register">
+			<h2>Event Registration</h2>
+			<form id="registrationForm">
+				<label for="name">Name</label>
+				<input id="name" name="name" type="text" placeholder="Enter your full name" required>
+
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+				<label for="eventType">Event Type</label>
+				<select id="eventType" name="eventType" required>
+					<option value="">Select an event</option>
+				</select>
+
+				<p id="formError" class="error-message"></p>
+				<button id="registerBtn" type="submit">Submit Registration</button>
+				<output id="confirmation" class="note"></output>
+			</form>
+			<div id="serverStatus"></div>
+		</section>
+
+		<section>
+			<h2>Event Promo Video</h2>
+			<video width="400" controls>
+				<source src="videos/event-promo.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+		</section>
+
+		<section>
+			<h2>Community Bulletin</h2>
+			<p class="news-article">
+				The city council has announced a month-long community participation drive. Residents are encouraged to
+				join neighborhood-level activities focused on cleanliness, public health awareness, and weekend recreation.
+				Each ward will host at least one skill-sharing session where local volunteers can teach photography,
+				basic first aid, spoken English, and arts for children.
+			</p>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<p>Local Community Event Portal</p>
+	</footer>
+
+	<script src="main.js"></script>
+</body>
+</html>

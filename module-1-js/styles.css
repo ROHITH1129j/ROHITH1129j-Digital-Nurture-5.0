@@ -1,0 +1,369 @@
+/* Task 1 and Task 2: CSS reset and base layout */
+* {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* Task 4 and Task 5: Theme, typography, and background */
+	body {
+		font-family: "Nunito", sans-serif;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1.65;
+		color: #1f2937;
+		background-color: rgba(234, 241, 248, 0.95);
+		background-image: url("images/portal-background.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+	}
+
+/* Task 8: Main page spacing */
+main {
+	width: 92%;
+	max-width: 1100px;
+	margin: 2vh auto;
+	padding: 1.2rem;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 12px;
+}
+
+/* Task 3: Main banner styling */
+#mainHeader {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: 800;
+	font-size: 2rem;
+	padding: 0.8rem;
+	margin-bottom: 0.8rem;
+	background: linear-gradient(90deg, #0b4a8f, #2f7abf);
+	color: #f8fbff;
+	border-radius: 8px;
+}
+
+/* Task 6: Navigation and link styling */
+nav {
+	background: #0f3d79;
+	padding: 0.75rem 1rem;
+}
+
+nav ul {
+	list-style-type: none;
+	list-style-position: inside;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+nav li {
+	padding: 0.25rem 0.4rem;
+	margin: 0.2rem;
+}
+
+nav a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+nav a:visited {
+	color: #d6e6ff;
+}
+
+nav a:hover {
+	color: #ffe8b3;
+	text-decoration: underline;
+}
+
+nav a:active {
+	color: #ffd166;
+}
+
+/* Task 3 and Task 8: Section spacing and borders */
+section {
+	margin: 1rem 0;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgba(15, 61, 121, 0.22);
+}
+
+section:last-of-type {
+	border-bottom: none;
+}
+
+/* Task 4 and Task 7: Section headers and content blocks */
+h2 {
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin-bottom: 0.8rem;
+	padding: 0.45rem 0.6rem;
+	background: linear-gradient(90deg, rgba(15, 61, 121, 0.12), rgba(15, 61, 121, 0.02));
+	border-left: 4px solid #0f3d79;
+	text-align: left;
+}
+
+h3,
+p {
+	color: #243447;
+	line-height: 1.65;
+}
+
+#welcomeBanner {
+	background-color: rgba(29, 78, 216, 0.9);
+	color: #ffffff;
+	padding: 0.9rem;
+	border-radius: 8px;
+	margin-bottom: 0.7rem;
+}
+
+.highlight {
+	background-color: #fff3c4;
+	padding: 0.15rem 0.45rem;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+/* Task 7 and Task 8: Dynamic event cards rendered by JavaScript */
+.event-card {
+	background: white;
+	border: 1px solid #ddd;
+	padding: 12px;
+	margin: 8px 0;
+	border-radius: 6px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h4 {
+	margin: 0 0 8px;
+	color: #0f3d79;
+}
+
+.event-card p {
+	margin: 4px 0;
+	font-size: 0.9rem;
+}
+
+.event-card button {
+	margin-right: 8px;
+	margin-top: 8px;
+}
+
+#loadingSpinner {
+	display: none;
+	text-align: center;
+	padding: 10px;
+	color: #0f3d79;
+	font-weight: 700;
+}
+
+#upcomingEvents,
+#filterResults,
+#searchResults {
+	margin-top: 1rem;
+}
+
+#eventSearch {
+	width: 100%;
+	max-width: 400px;
+}
+
+#serverStatus {
+	display: none;
+	margin-top: 8px;
+	padding: 8px;
+	border-radius: 4px;
+}
+
+#serverStatus.show {
+	display: block;
+}
+
+/* Task 4 and Task 7: Card presentation */
+.eventCard {
+	margin: 0.45rem;
+	padding: 0.55rem;
+	border: 1px solid rgba(31, 41, 55, 0.25);
+	outline: 1px solid rgba(31, 41, 55, 0.12);
+	background-color: rgba(255, 255, 255, 0.96);
+	border-radius: 6px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+td,
+th {
+	border: 1px solid #d5deea;
+	padding: 0.55rem;
+	background-color: rgba(255, 255, 255, 0.9);
+	vertical-align: top;
+}
+
+tr:nth-child(even) {
+	background-color: rgba(212, 226, 244, 0.35);
+}
+
+/* Task 4: Gallery image sizing */
+.event-image {
+	width: 100%;
+	max-width: 320px;
+	height: 190px;
+	object-fit: cover;
+	border: 3px solid #1f2937;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.event-image.large {
+	transform: scale(1.2);
+}
+
+figure {
+	margin: 0;
+}
+
+figcaption {
+	font-size: 0.92rem;
+	margin-top: 0.3rem;
+	font-style: italic;
+}
+
+/* Task 5: Form layout */
+form {
+	display: grid;
+	gap: 0.65rem;
+	max-width: 660px;
+}
+
+label {
+	font-weight: 700;
+}
+
+input,
+select,
+textarea,
+/* Task 6: Button styling */
+button {
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 3px solid rgba(30, 144, 255, 0.35);
+}
+
+button {
+	width: fit-content;
+	background-color: #0f3d79;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0b2d5a;
+}
+
+.note {
+	color: #0b7a43;
+	font-weight: 700;
+}
+
+.error-message {
+	color: #b91c1c;
+	font-weight: 700;
+	min-height: 1.5rem;
+}
+
+.community-list {
+	margin-top: 0.6rem;
+	padding-left: 1.1rem;
+	list-style-type: square;
+	list-style-position: outside;
+}
+
+.community-list li {
+	margin: 0.25rem 0;
+	padding-left: 0.2rem;
+}
+
+/* Task 8: Multi-column bulletin text */
+.news-article {
+	column-count: 2;
+	column-gap: 30px;
+	column-rule: 1px solid gray;
+	text-align: justify;
+}
+
+.visibility-hidden {
+	visibility: hidden;
+}
+
+.display-none {
+	display: none;
+}
+
+/* Task 7: Video styling */
+video {
+	width: min(100%, 420px);
+	height: auto;
+	border-radius: 8px;
+	border: 2px solid #c9d5e6;
+}
+
+footer {
+	text-align: center;
+	padding: 1rem;
+	background-color: rgba(229, 231, 235, 0.95);
+	font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 15px;
+	}
+
+	main {
+		width: 95%;
+		padding: 4vw;
+	}
+
+	nav ul {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.45rem;
+	}
+
+	#mainHeader {
+		font-size: 1.55rem;
+	}
+
+	h2 {
+		font-size: 1.2rem;
+	}
+
+	.event-image {
+		max-width: 180px;
+	}
+
+	td,
+	th {
+		padding: 0.35rem;
+	}
+
+	.news-article {
+		column-count: 1;
+	}
+}
